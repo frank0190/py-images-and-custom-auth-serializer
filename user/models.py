@@ -1,9 +1,9 @@
-from django.contrib.auth.models import BaseUserManager, AbstractUser
+from django.contrib.auth.models import AbstractUser, UserManager as DjangoUserManager
 from django.db import models
 from django.utils.translation import gettext as _
 
 
-class UserManager(BaseUserManager):
+class UserManager(DjangoUserManager):
     """Define a model manager for User model with no username field."""
 
     use_in_migrations = True
